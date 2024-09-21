@@ -1,0 +1,24 @@
+Round,Race Date,GP Name,Country,City,Circuit Name,lat,long,First GP,Number of times raced,Number of Laps,Circuit Length(km),Race Distance(km),Lap Record,Record Owner,Record Year,Turns,DRS Zones
+1,5/03/2023,Gulf Air Bahrain GP,Bahrain,Sakhir,Bahrain International Circuit,26.0325,50.510556,2004,19,57,5.412,308.238,01:31.4,Pedro de la Rosa,2005,15,3
+2,19/03/2023,STC Saudi Arabian GP,Saudi Arabia,Jeddah,Jeddah Corniche Circuit,21.6319,39.1044,2021,2,50,6.174,308.45,01:30.7,Lewis Hamilton,2021,27,3
+3,2/04/2023,Rolex Australian GP,Australia,Melbourne,Melbourne Grand Prix Circuit,-37.8497,144.968,1996,25,58,5.278,306.124,01:20.2,Sergio Perez,2023,14,4
+4,30/04/2023,Azerbaijan GP,Azerbaijan,Baku,Baku City Circuit,40.3725,49.8533,2016,6,51,6.003,306.049,01:43.0,Charles Leclerc,2019,20,2
+5,7/05/2023,Crypto.com Miami GP,United States,Miami,Miami International Autodrome,25.9581,-80.2389,2022,1,57,5.412,308.326,01:29.7,Max Verstappen,2023,19,3
+6,TBD,Qatar Airways Gran Premio Del Made In Italy e Dell'Emilia-Romagna,Italy,Imola,Autodromo Enzo e Dino Ferrari,44.3439,11.7167,1980,30,63,4.909,309.049,01:15.5,Lewis Hamilton,2020,19,1
+7,28/05/2023,Grand Prix de Monaco,Monaco,Monaco,Circuit de Monaco,43.7347,7.42056,1950,68,78,3.337,260.286,01:12.9,Lewis Hamilton,2021,19,1
+8,4/06/2023,AWS Gran Premio de Espania,Spain,Catalunya,Circuit de Barcelona-Catalunya,41.57,2.26111,1991,32,66,4.657,307.236,01:16.3,Max Verstappen,2023,14,2
+9,18/06/2023,Pirelli Grand Prix du Canada,Canada,Montreal,Circuit Gilles-Villeneuve,45.5,-73.5228,1978,41,70,4.361,305.27,01:13.1,Valtteri Bottas,2018,14,3
+10,2/07/2023,Rolex Grosser Preis Von Osterreich,Austria,Spielberg,Red Bull Ring,47.2197,14.7647,1970,36,71,4.318,306.452,01:05.6,Carlos Sainz,2020,10,3
+11,9/07/2023,Aramco British GP,Great Britain,Silverstone,Silverstone Circuit,52.0786,-1.01694,1950,57,52,5.891,306.198,01:27.1,Max Verstappen,2020,18,2
+12,23/07/2023,Qatar Airways Hungarian GP,Hungary,Budapest,Hungaroring,47.5789,19.2486,1986,37,70,4.381,306.63,01:16.6,Lewis Hamilton,2020,14,2
+13,30/07/2023,MSC Cruises Belgian GP,Belgium,Spa-Francorchamps,Circuit de Spa-Francorchamps,50.4372,5.97139,1950,55,44,7.004,308.052,01:46.3,Valtteri Bottas,2018,19,2
+14,27/08/2023,Heineken Dutch GP,Netherlands,Zandvoort,Circuit Zandvoort,52.3888,4.54092,1952,32,72,4.259,306.587,01:11.1,Lewis Hamilton,2021,14,2
+15,3/09/2023,Pirelli Gran Premio D'Italia,Italy,Monza,Autodromo Nazionale Monza,45.6156,9.28111,1950,72,53,5.793,306.72,01:21.0,Rubens Barrichello,2004,11,2
+16,17/09/2023,Singapore Airlines Singapore GP,Singapore,Singapore,Marina Bay Street Circuit,1.2914,103.864,2008,13,62,4.94,306.143,01:35.9,Lewis Hamilton,2023,19,3
+17,24/09/2023,Lenovo Japanese GP,Japan,Suzuka,Suzuka International Racing Course,34.8431,136.541,1987,32,53,5.807,307.471,01:31.0,Lewis Hamilton,2019,18,1
+18,8/10/2023,Qatar Airways Qatar GP,Qatar,Lusail,Lusail International Circuit,25.49,51.4542,2021,1,57,5.419,308.611,01:24.3,Max Verstappen,2023,16,1
+19,22/10/2023,Lenovo United States GP,United States,Austin,Circuit of The Americas,30.1328,-97.6411,2012,10,56,5.513,308.405,01:36.2,Charles Leclerc,2019,20,2
+20,29/10/2023,Gran Premio de la Ciudad de Mexico,Mexico,Mexico City,Autodromo Hermanos Rodriguez,19.4042,-99.0907,1963,22,71,4.304,305.354,01:17.8,Valtteri Bottas,2021,17,3
+21,5/11/2023,Rolex Grande Premio de Sao Paulo,Brazil,Sao Paulo,Autodromo Jose Carlos Pace,-23.7036,-46.6997,1973,39,71,4.309,305.879,01:10.5,Valtteri Bottas,2018,15,2
+22,18/11/2023,Heineken Silver Las Vegas GP,United States,Las Vegas,Las Vegas Strip Circuit,36.1162,-115.174,2023,1,50,6.201,309.958,01:35.5,Oscar Piastri,2023,17,2
+23,26/11/2023,Etihad Airways Abu Dhabi GP,Abu Dhabi,Yas Island,Yas Marina Circuit,24.4672,54.6031,2009,14,58,5.281,306.183,01:26.1,Max Verstappen,2021,16,2

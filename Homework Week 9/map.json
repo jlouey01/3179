@@ -1,0 +1,120 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 450,
+  "title": "F1 2023 Race Calendar",
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jlouey01/3179/refs/heads/main/world_map.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jlouey01/3179/refs/heads/main/world_map.topojson",
+        "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+      },
+      "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jlouey01/3179/refs/heads/main/Formula1_2023season_calendar.csv"
+      },
+      "transform": [
+        {
+          "calculate": "timeParse(datum['Race Date'], '%d/%m/%Y')",
+          "as": "parsed_date"
+        },
+        {
+          "window": [
+            {"op": "lead", "field": "long", "as": "next_long"},
+            {"op": "lead", "field": "lat", "as": "next_lat"}
+          ]
+        },
+        {"filter": "isValid(datum.next_long) && isValid(datum.next_lat)"}
+      ],
+      "mark": {"type": "rule", "color": "Black", "strokeWidth": 1},
+      "encoding": {
+        "longitude": {"field": "long", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "longitude2": {"field": "next_long", "type": "quantitative"},
+        "latitude2": {"field": "next_lat", "type": "quantitative"}
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jlouey01/3179/refs/heads/main/Formula1_2023season_calendar.csv"
+      },
+      "transform": [
+        {
+          "calculate": "timeParse(datum['Race Date'], '%d/%m/%Y')",
+          "as": "parsed_date"
+        }
+      ],
+      "mark": {"type": "circle", "size": 20, "strokeWidth": 2},
+      "encoding": {
+        "longitude": {"field": "long", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "stroke": {
+          "condition": {
+            "test": "datum.Round == 1 | datum.Round == 23",
+            "value": "red"
+          },
+          "value": "blue"
+        },
+        "fill": {"value": "none"},
+        "tooltip": [
+          {"field": "Round", "type": "nominal"},
+          {"field": "GP Name", "type": "nominal"},
+          {"field": "Country", "type": "nominal"},
+          {
+            "field": "parsed_date",
+            "type": "temporal",
+            "timeUnit": "yearmonthdate",
+            "title": "Race Date"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jlouey01/3179/refs/heads/main/Formula1_2023season_calendar.csv"
+      },
+      "transform": [{"filter": "datum.Round == 1"}],
+      "mark": {
+        "type": "text",
+        "dy": -10,
+        "dx": -10,
+        "fontSize": 14,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "longitude": {"field": "long", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"value": "Start"}
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jlouey01/3179/refs/heads/main/Formula1_2023season_calendar.csv"
+      },
+      "transform": [{"filter": "datum.Round == 23"}],
+      "mark": {
+        "type": "text",
+        "dy": 10,
+        "dx": 10,
+        "fontSize": 14,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "longitude": {"field": "long", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"value": "End"}
+      }
+    }
+  ],
+  "config": {}
+}
