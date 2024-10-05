@@ -1,0 +1,174 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 400,
+    "data": {
+      "url": "https://raw.githubusercontent.com/jlouey01/3179/refs/heads/main/Homework%20Week%2010/Formula1_2023season_raceResults.csv",
+      "format": {"type": "csv"}
+    },
+    "params": [
+      {
+        "name": "driver_selection",
+        "value": "All Drivers",
+        "bind": {
+          "input": "select",
+          "options": [
+            "All Drivers",
+            "Alexander Albon",
+            "Carlos Sainz",
+            "Charles Leclerc",
+            "Daniel Ricciardo",
+            "Esteban Ocon",
+            "Fernando Alonso",
+            "George Russell",
+            "Kevin Magnussen",
+            "Lance Stroll",
+            "Lando Norris",
+            "Lewis Hamilton",
+            "Liam Lawson",
+            "Logan Sargeant",
+            "Max Verstappen",
+            "Nico Hulkenberg",
+            "Nyck De Vries",
+            "Oscar Piastri",
+            "Pierre Gasly",
+            "Sergio Perez",
+            "Valtteri Bottas",
+            "Yuki Tsunoda",
+            "Zhou Guanyu"
+          ],
+          "name": "Driver Selection"
+        }
+      }
+    ],
+    "transform": [
+      {
+        "filter": "driver_selection == 'All Drivers' || datum.Driver === driver_selection"
+      },
+      {
+        "window": [
+          {
+            "op": "sum",
+            "field": "Points",
+            "as": "Cumulative Points"
+          }
+        ],
+        "groupby": ["Driver"],
+        "sort": [
+          {"field": "Track Order", "order": "ascending"}
+        ]
+      }
+    ],
+    "layer": [
+      {
+        "mark": {
+          "type": "line",
+          "point": true
+        },
+        "encoding": {
+          "x": {
+            "field": "Track Order",
+            "type": "quantitative",
+            "title": "Race Number",
+            "axis": {
+              "labelAngle": 0,
+              "format": "d"
+            },
+            "scale": {
+              "domainMin": 1
+            }
+          },
+          "y": {
+            "field": "Cumulative Points",
+            "type": "quantitative",
+            "title": "Cumulative Points"
+          },
+          "color": {
+            "field": "Driver",
+            "type": "nominal",
+            "legend": {
+              "title": "Driver",
+              "orient": "right",
+              "offset": 50
+            },
+            "scale": {
+              "domain": [
+                "Alexander Albon",
+                "Carlos Sainz",
+                "Charles Leclerc",
+                "Daniel Ricciardo",
+                "Esteban Ocon",
+                "Fernando Alonso",
+                "George Russell",
+                "Kevin Magnussen",
+                "Lance Stroll",
+                "Lando Norris",
+                "Lewis Hamilton",
+                "Liam Lawson",
+                "Logan Sargeant",
+                "Max Verstappen",
+                "Nico Hulkenberg",
+                "Nyck De Vries",
+                "Oscar Piastri",
+                "Pierre Gasly",
+                "Sergio Perez",
+                "Valtteri Bottas",
+                "Yuki Tsunoda",
+                "Zhou Guanyu"
+              ],
+              "range": [
+                "#005AFF",
+                "#FF6347", 
+                "#DC0000",
+                "#4B0082", 
+                "#505050",
+                "#006F62", 
+                "#007F7F", 
+                "#A9A9A9",
+                "#32CD32",
+                "#FF8700", 
+                "#00D2BE",  
+                "#4682B4", 
+                "#1E90FF", 
+                "#1E41FF", 
+                "#D3D3D3", 
+                "#708090", 
+                "#FFB347", 
+                "#707070", 
+                "#0048D9", 
+                "#8B0000", 
+                "#2B4562", 
+                "#CD5C5C" 
+              ]
+            }
+          },
+          "tooltip": [
+            {"field": "Track", "title": "Race Track"},
+            {"field": "Driver", "title": "Driver"},
+            {"field": "Team", "title": "Team"},
+            {"field": "Position", "title": "Position Finished"},
+            {"field": "Points", "title": "Points Scored"},
+            {"field": "Cumulative Points", "title": "Total Cumulative Points"}
+          ]
+        }
+      },
+      {
+        "transform": [
+          {
+            "filter": "datum['Track Order'] == 22"
+          }
+        ],
+        "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5, "fontSize": 10, "fontWeight": "bold"},
+        "encoding": {
+          "x": {"field": "Track Order", "type": "quantitative"},
+          "y": {"field": "Cumulative Points", "type": "quantitative"},
+          "text": {"field": "Cumulative Points"},
+          "color": {
+            "field": "Driver",
+            "type": "nominal"
+          }
+        }
+      }
+    ]
+  }
+  
