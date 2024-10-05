@@ -21,6 +21,7 @@
             "Esteban Ocon",
             "Fernando Alonso",
             "George Russell",
+            "Guanyu Zhou",
             "Kevin Magnussen",
             "Lance Stroll",
             "Lando Norris",
@@ -34,10 +35,10 @@
             "Pierre Gasly",
             "Sergio Perez",
             "Valtteri Bottas",
-            "Yuki Tsunoda",
-            "Guanyu Zhou"
+            "Yuki Tsunoda"
+
           ],
-          "name": "Driver Selection"
+          "name": "Driver Selection: "
         }
       }
     ],
@@ -100,6 +101,7 @@
                 "Esteban Ocon",
                 "Fernando Alonso",
                 "George Russell",
+                "Guanyu Zhou",
                 "Kevin Magnussen",
                 "Lance Stroll",
                 "Lando Norris",
@@ -113,8 +115,8 @@
                 "Pierre Gasly",
                 "Sergio Perez",
                 "Valtteri Bottas",
-                "Yuki Tsunoda",
-                "Guanyu Zhou"
+                "Yuki Tsunoda"
+                
               ],
               "range": [
                 "#005AFF",
@@ -123,7 +125,8 @@
                 "#4B0082", 
                 "#505050",
                 "#006F62", 
-                "#007F7F", 
+                "#007F7F",
+                "#CD5C5C", 
                 "#A9A9A9",
                 "#32CD32",
                 "#FF8700", 
@@ -137,8 +140,7 @@
                 "#707070", 
                 "#0048D9", 
                 "#8B0000", 
-                "#2B4562", 
-                "#CD5C5C" 
+                "#2B4562" 
               ]
             }
           },
