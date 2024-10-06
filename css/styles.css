@@ -1,0 +1,73 @@
+body {
+    font-family: 'Libre Franklin', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background for contrast */
+}
+
+/* Title Styles */
+h1 {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700; /* Bold title */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600; /* Slightly bold for subheadings */
+    margin-bottom: 10px;
+}
+
+/* Paragraph Styles */
+p {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1rem;
+    font-weight: 400; /* Regular weight for paragraph text */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Description Styles */
+.description {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for boxes */
+}
+
+/* Visualization Container Styles */
+.vis-container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    padding: 20px; /* Add space around the visualizations */
+    width: 100%; /* Ensure the visualizations stay within the width of the container */
+  }
+  
+
+/* Responsive Text Alignment */
+.description-left {
+    text-align: left;
+}
+
+.description-right {
+    text-align: right;
+}
+
+/* Footer Styles */
+.small-font {
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 30px;
+    color: #555;
+}
+
+a {
+    font-family: 'Libre Franklin', sans-serif;
+    color: #1f8dd6;
+    text-decoration: none;
+}
