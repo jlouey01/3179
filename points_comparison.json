@@ -1,0 +1,48 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/jlouey01/3179/refs/heads/main/Homework%20Week%2010/Formula1_2023season_raceResults.csv",
+    "format": {"type": "csv"}
+  },
+  "facet": {
+    "field": "Team",
+    "type": "nominal",
+    "title": "Team Points Contribution by Driver"
+  },
+  "spec": {
+    "width": 200,
+    "height": 200,
+    "layer": [
+      {
+        "mark": {"type": "arc", "innerRadius": 50},
+        "encoding": {
+          "theta": {"field": "Points", "type": "quantitative", "stack": true},
+          "color": {"field": "Driver", "type": "nominal", "title": "Driver"},
+          "tooltip": [
+            {"field": "Driver", "title": "Driver"},
+            {"field": "Points", "title": "Points Contributed"}
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "align": "center",
+          "baseline": "middle",
+          "fontSize": 50,
+          "fontWeight": "bold"
+        },
+        "encoding": {
+          "text": {
+            "aggregate": "sum",
+            "field": "Points",
+            "type": "quantitative"
+          },
+          "color": {"value": "black"}
+        }
+      }
+    ]
+  },
+  "resolve": {"scale": {"color": "independent"}},
+  "config": {}
+}
