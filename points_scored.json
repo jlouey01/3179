@@ -1,7 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 400,
+    "width": 400,
+    "height": 300,
+    "title": "Drivers Points Scored",
     "data": {
       "url": "https://raw.githubusercontent.com/jlouey01/3179/refs/heads/main/Homework%20Week%2010/Formula1_2023season_raceResults.csv",
       "format": {"type": "csv"}

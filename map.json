@@ -2,7 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 800,
   "height": 450,
-  "title": "F1 2023 Race Calendar",
   "projection": {"type": "equalEarth"},
   "layer": [
     {

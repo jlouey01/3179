@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formula 1 2023 Season Analysis</title>
+
+  <!-- Import Vega, Vega-Lite, and Vega-Embed -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900&display=swap" rel="stylesheet">
+
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="page">
+    <!-- Title Section -->
+    <h1 class="title">Formula 1 2023 Season</h1>
+
+    <!-- Description Section -->
+    <p class="graph-description">
+      The 2023 Formula 1 season has been an exciting ride with thrilling races, unexpected podium finishes, and intense battles between drivers and teams. With innovations in technology and strategy, this season has kept fans on the edge of their seats as drivers compete for the coveted championship title.
+    </p>
+
+    <h3 class="section-title">F1 2023 Race Calender</h3>
+
+    <!-- Map Visualization Section -->
+    <div class="map-container">
+      <div id="vis0" class="map"></div>
+    </div>
+
+    <!-- Text Below the Map -->
+    <div class="graph-description">
+      The map above showcases the locations of all Formula 1 races for the 2023 season. The lines represent the travel routes between different Grand Prix events, beginning from the first race to the final showdown. This year, the F1 calendar features circuits across multiple continents, highlighting the global reach of the sport.
+    </div>
+
+    <!-- Smaller Title for Points Scored -->
+    <h3 class="section-title">Points scored in 2023</h3>
+
+    <!-- Points Scored and Team Points Scored Visualizations -->
+    <div class="visualization-row">
+      <div class="visualization">
+        <div id="vis3"></div>
+      </div>
+      <div class="visualization">
+        <div id="vis6"></div>
+      </div>
+    </div>
+
+    <!-- Text Box for Points Scored and Team Points Scored -->
+    <div class="graph-description">
+      These graphs illustrate the cumulative points scored by drivers, comparison between drivers, and teams over the 2023 Formula 1 season. The graphs on the left and right show individual driver performance and team performance, while the middle full-width graph compares points among drivers directly.
+    </div>
+
+    <!-- Centralized Podium Finishes -->
+    <div class="podium-container">
+      <div id="vis1" class="podium"></div>
+    </div>
+
+    <!-- Text Box for Podium Finishes -->
+    <div class="graph-description">
+      The "Podium Finishes" graph highlights the number of times each driver has finished on the podium (top three) during the 2023 season. This visualization helps to identify which drivers have been the most consistent in achieving top results throughout the season.
+    </div>
+
+    <!-- New Visualizations -->
+    <div class="visualization-row">
+      <div class="visualization">
+        <div id="vis7"></div>
+      </div>
+      <div class="visualization">
+        <div id="vis8"></div>
+      </div>
+    </div>
+
+    <!-- New Text Box for Position Change and Finished -->
+    <div class="graph-description">
+      The two graphs above show the performance trends of drivers based on their starting and finishing positions. The "Position Change" graph illustrates how driver starting positions have evolved throughout the season, while the "Position Finished" graph highlights the relative positions in which drivers completed each race. These visualizations give insight into drivers’ consistency and ability to improve race position.
+    </div>
+
+    <!-- Additional Visualizations will go below this section -->
+    <div class="pure-g">
+      <div id="vis4" class="pure-u-1"></div>
+      <div id="vis5" class="pure-u-1"></div>
+    </div>
+  </div>
+
+  <!-- Scripts to embed visualizations -->
+  <script type="text/javascript">
+    var specVis0 = "./map.json";
+    var specVis1 = "./podium_finishes.json";
+    var specVis2 = "./points_comparison.json";
+    var specVis3 = "./points_scored.json";
+    var specVis6 = "./teampoints_scored.json";
+    var specVis7 = "./position_change.json";
+    var specVis8 = "./position_finished.json";
+
+    // Embed the map visualization
+    vegaEmbed('#vis0', specVis0, { "actions": false }).catch(console.error);
+
+    // Embed other visualizations
+    vegaEmbed('#vis1', specVis1, { "actions": false }).catch(console.error);
+    vegaEmbed('#vis2', specVis2, { "actions": false }).catch(console.error);
+    vegaEmbed('#vis3', specVis3, { "actions": false }).catch(console.error);
+    vegaEmbed('#vis6', specVis6, { "actions": false }).catch(console.error);
+    vegaEmbed('#vis7', specVis7, { "actions": false }).catch(console.error);
+    vegaEmbed('#vis8', specVis8, { "actions": false }).catch(console.error);
+  </script>
+</body>
+
+</html>

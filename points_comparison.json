@@ -10,8 +10,6 @@
     "title": "Team Points Contribution by Driver"
   },
   "spec": {
-    "width": 200,
-    "height": 200,
     "layer": [
       {
         "mark": {"type": "arc", "innerRadius": 50},
@@ -20,6 +18,7 @@
           "color": {"field": "Driver", "type": "nominal", "title": "Driver"},
           "tooltip": [
             {"field": "Driver", "title": "Driver"},
+            {"field": "Team", "title": "Team"},  
             {"field": "Points", "title": "Points Contributed"}
           ]
         }
@@ -29,7 +28,7 @@
           "type": "text",
           "align": "center",
           "baseline": "middle",
-          "fontSize": 50,
+          "fontSize": 30,
           "fontWeight": "bold"
         },
         "encoding": {

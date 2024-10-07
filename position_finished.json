@@ -23,6 +23,7 @@
     }
   ],
   "mark": {"type": "rect", "tooltip": true},
+  "title": "Driver's Average Finishing Positions",
   "encoding": {
     "x": {
       "field": "NumericPosition",
