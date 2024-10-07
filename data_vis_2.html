@@ -2,158 +2,112 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formula 1 2023 Season Analysis</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 2023 Season Analysis</title>
 
-  <!-- Import Vega, Vega-Lite, and Vega-Embed -->
-  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <!-- Import Vega, Vega-Lite, and Vega-Embed -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 
-  <!-- Import pure.css -->
-  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
-    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <!-- Import pure.css -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
-  <!-- External CSS for custom styling -->
-  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+    <!-- External CSS for custom styling -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 </head>
 
 <body>
-  <div class="page">
+<div class="page">
+    <h1 class="title">Formula 1 2023 Season</h1>
 
-    <!-- Full-width header -->
-    <div class="pure-g">
-      <div class="pure-u-1-1">
-        <h1>Formula 1 2023 Season Visualizations</h1>
-        <p>An in-depth analysis of driver performances, fastest laps, and race outcomes through interactive visualizations.</p>
-      </div>
-    </div>
-
-    <!-- MAP TEXT container -->
-    <div class="pure-g">
-      <div class="pure-u-1">
-        <div class="description">
-          <h2>Map of Driver and Team Points Distribution</h2>
-          <p>An overview map that displays key locations and performance data based on drivers and teams throughout the 2023 season.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- MAP Visualization (Full Width in a Row) -->
-    <div class="pure-g">
-        <div class="pure-u-1">
-        <div id="vis0" class="vis-container"></div>
+    <p class = "graph-description"> The 2023 Formula 1 season has been an exciting ride with thrilling races, unexpected podium finishes, and intense battles between drivers and teams. With innovations in technology and strategy, this season has kept fans on the edge of their seats as drivers compete for the coveted championship title.</p>
+    
+    <div class="flex-container">
+        <div class="vis-section">
+            <h2>Map of F1 Races in 2023</h2>
+            <div id="vis0" class="vis-container"></div>
         </div>
     </div>
 
-    <!-- Points Scored TEXT container -->
-    <div class="pure-g">
-      <div class="pure-u-1">
-        <div class="description">
-          <h2>Points Scored</h2>
-          <p>This section focuses on the points scored by drivers and teams throughout the 2023 season.</p>
+    <p class="graph-description">
+        The 2023 Formula 1 season has been an exciting ride with thrilling races, unexpected podium finishes, and intense battles between drivers and teams. With innovations in technology and strategy, this season has kept fans on the edge of their seats as drivers compete for the coveted championship title.
+    </p>
+
+    <h2>Points per Team and Driver</h2>
+
+    <div class="flex-container">
+        <div class="vis-section">
+            <div id="vis3" class="vis-container">
+            </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Points Scored and Team Points Scored Side by Side -->
-    <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div id="vis3" class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-2">
-        <div id="vis6" class="vis-container"></div>
-      </div>
-    </div>
-
-    <!-- Points Comparison TEXT container -->
-    <div class="pure-g">
-      <div class="pure-u-1">
-        <div class="description">
-          <h2>Points Comparison Between Drivers</h2>
-          <p>This comparison shows the cumulative points accumulated by each driver over the course of the season.</p>
+        <div class="vis-section">
+            <div id="vis6" class="vis-container"></div>
         </div>
-      </div>
     </div>
 
-    <!-- Points Comparison Visualization (Full Width in a Row) -->
-    <div class="pure-g">
-      <div class="pure-u-1">
-        <div id="vis2" class="vis-container"></div>
-      </div>
-    </div>
+    <p class="graph-description">
+        The 2023 Formula 1 season has been an exciting ride with thrilling races, unexpected podium finishes, and intense battles between drivers and teams. With innovations in technology and strategy, this season has kept fans on the edge of their seats as drivers compete for the coveted championship title.
+    </p>
 
-    <!-- Position Change and Position Finished TEXT container -->
-    <div class="pure-g">
-      <div class="pure-u-1">
-        <div class="description">
-          <h2>Position Change and Final Position</h2>
-          <p>This section covers each driver's position changes during the race and their final finishing positions across the season.</p>
+    <div class="flex-container">
+        <div class="vis-section">
+            <h2>Podium Analysis</h2>
+            <div id="vis1" class="vis-container"></div>
         </div>
-      </div>
     </div>
 
-    <!-- Position Change and Position Finished Side by Side -->
-    <div class="pure-g">
-      <div class="pure-u-1-2">
-        <div id="vis4" class="vis-container"></div>
-      </div>
-      <div class="pure-u-1-2">
-        <div id="vis5" class="vis-container"></div>
-      </div>
-    </div>
+    <p class="graph-description">
+        The 2023 Formula 1 season has been an exciting ride with thrilling races, unexpected podium finishes, and intense battles between drivers and teams. With innovations in technology and strategy, this season has kept fans on the edge of their seats as drivers compete for the coveted championship title.
+    </p>
 
-    <!-- Podium Finishes TEXT container -->
-    <div class="pure-g">
-      <div class="pure-u-1">
-        <div class="description">
-          <h2>Podium Finishes by Driver</h2>
-          <p>This section highlights the number of 1st, 2nd, and 3rd place finishes by each driver throughout the season.</p>
+    <div class="flex-container">
+        <div class="vis-section">
+            <div id="vis4" class="vis-container">
+            </div>
         </div>
-      </div>
+        <div class="vis-section">
+            <div id="vis5" class="vis-container"></div>
+        </div>
     </div>
 
-    <!-- Podium Finishes Visualization (Full Width in a Row) -->
-    <div class="pure-g">
-      <div class="pure-u-1">
-        <div id="vis1" class="vis-container"></div>
-      </div>
-    </div>
+    <p class="graph-description">
+        The 2023 Formula 1 season has been an exciting ride with thrilling races, unexpected podium finishes, and intense battles between drivers and teams. With innovations in technology and strategy, this season has kept fans on the edge of their seats as drivers compete for the coveted championship title.
+    </p>
 
-    <!-- Footer for source and credits -->
-    <div class="pure-g">
-      <div class="pure-u-1-1 small-font">
-        <p>These visualizations are created for a detailed analysis of the Formula 1 2023 season using Vega-Lite.</p>
-      </div>
-    </div>
+    <p class="small-font">
+        Visualisation Author: Jonathon Louey, Student ID: 31561012, Date: 7/10/2024, Data obtained from: https://github.com/toUpperCase78/formula1-datasets/blob/master/Formula1_2023season_calendar.csv and https://www.kaggle.com/datasets/rohanrao/formula-1-world-championship-1950-2020
+    </p>
 
-  </div>
+</div>
 
-  <!-- Scripts to embed visualizations -->
-  <script type="text/javascript">
-    var specVis0 = "./map.json";
-    var specVis1 = "./podium_finishes.json";
-    var specVis2 = "./points_comparison.json";
-    var specVis3 = "./points_scored.json";
-    var specVis4 = "./position_change.json";
-    var specVis5 = "./position_finished.json";
-    var specVis6 = "./teampoints_scored.json";
+    <!-- Scripts to embed visualizations -->
+    <script type="text/javascript">
+        var specVis0 = "./map.json";
+        var specVis1 = "./podium_finishes.json";
+        var specVis2 = "./points_comparison.json";
+        var specVis3 = "./points_scored.json";
+        var specVis4 = "./position_change.json";
+        var specVis5 = "./position_finished.json";
+        var specVis6 = "./teampoints_scored.json";
 
-    // Embed each visualization into its respective container
-    vegaEmbed('#vis0', specVis0, { "actions": false }).catch(console.error);
-    vegaEmbed('#vis1', specVis1, { "actions": false }).catch(console.error);
-    vegaEmbed('#vis2', specVis2, { "actions": false }).catch(console.error);
-    vegaEmbed('#vis3', specVis3, { "actions": false }).catch(console.error);
-    vegaEmbed('#vis4', specVis4, { "actions": false }).catch(console.error);
-    vegaEmbed('#vis5', specVis5, { "actions": false }).catch(console.error);
-    vegaEmbed('#vis6', specVis6, { "actions": false }).catch(console.error);
-  </script>
+        // Embed each visualization into its respective container
+        vegaEmbed('#vis0', specVis0, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis1', specVis1, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis2', specVis2, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis3', specVis3, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis4', specVis4, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis5', specVis5, { "actions": false }).catch(console.error);
+        vegaEmbed('#vis6', specVis6, { "actions": false }).catch(console.error);
+    </script>
 </body>
 
 </html>
