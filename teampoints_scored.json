@@ -7,35 +7,9 @@
     "url": "https://raw.githubusercontent.com/jlouey01/3179/refs/heads/main/Homework%20Week%2010/Formula1_2023season_raceResults.csv",
     "format": {"type": "csv"}
   },
-  "params": [
-    {
-      "name": "team_selection",
-      "value": "All Teams",
-      "bind": {
-        "input": "select",
-        "options": [
-          "All Teams",
-          "Alfa Romeo Ferrari",
-          "AlphaTauri Honda RBPT",
-          "Alpine Renault",
-          "Aston Martin Aramco Mercedes",
-          "Ferrari",
-          "Haas Ferrari",
-          "McLaren Mercedes",
-          "Mercedes",
-          "Red Bull Racing Honda RBPT",
-          "Williams Mercedes"
-        ],
-        "name": "Team Selection: "
-      }
-    }
-  ],
   "transform": [
     {
-      "filter": "team_selection == 'All Teams' || datum.Team === team_selection"
-    },
-    {
-      "filter": "isValid(datum['Track Order']) && isValid(datum['Points'])"
+      "filter": "isValid(datum['Track Order']) && isValid(datum['Track']) && isValid(datum['Points'])"
     },
     {
       "aggregate": [
@@ -82,7 +56,7 @@
             "format": "d"
           },
           "scale": {
-            "domainMin": 1
+            "domainMin": 0
           }
         },
         "y": {
@@ -130,25 +104,19 @@
           {"field": "Team", "title": "Team"},
           {"field": "Total Points", "title": "Points Scored in Race"},
           {"field": "Cumulative Points", "title": "Total Cumulative Points"}
-        ]
-      }
-    },
-    {
-      "transform": [
+        ],
+        "opacity": {
+          "condition": {"param": "team_highlight", "value": 1},
+          "value": 0.1
+        }
+      },
+      "params": [
         {
-          "filter": "datum['Track Order'] == 22"
+          "name": "team_highlight",
+          "select": {"type": "point", "fields": ["Team"]},
+          "bind": "legend"
         }
-      ],
-      "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5, "fontSize": 10, "fontWeight": "bold"},
-      "encoding": {
-        "x": {"field": "Track Order", "type": "quantitative"},
-        "y": {"field": "Cumulative Points", "type": "quantitative"},
-        "text": {"field": "Cumulative Points"},
-        "color": {
-          "field": "Team",
-          "type": "nominal"
-        }
-      }
+      ]
     }
   ]
 }
