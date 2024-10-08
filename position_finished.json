@@ -46,7 +46,7 @@
       "field": "PositionCount",
       "type": "quantitative",
       "title": "Frequency",
-      "scale": {"scheme": "reds", "domain": [0, 10]}
+      "scale": {"scheme": "reds", "domain": [0, 20]}
     }
   },
   "config": {"view": {"stroke": "transparent"}, "axis": {"grid": false}}
