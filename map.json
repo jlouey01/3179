@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 600,
-  "height": 400,
+  "width": 800,
+  "height": 600,
   "projection": {"type": "equalEarth"},
   "layer": [
     {
@@ -76,6 +76,26 @@
             "title": "Race Date"
           }
         ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jlouey01/3179/refs/heads/main/Homework%20Week%209/Formula1_2023season_calendar.csv"
+      },
+      "transform": [
+        {"filter": "datum.Round <= 5 & datum.Round >1"} 
+      ],
+      "mark": {
+        "type": "text",
+        "dy": -8,
+        "dx": -1,
+        "fontSize": 12,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "longitude": {"field": "long", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "text": {"field": "Round", "type": "nominal"}
       }
     },
     {
